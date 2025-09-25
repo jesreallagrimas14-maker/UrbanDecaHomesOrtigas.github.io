@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Deca Homes Ortigas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Show selected form and hide others
+    function showForm(formId) {
+      document.getElementById("buyerForm").classList.add("hidden");
+      document.getElementById("referralForm").classList.add("hidden");
+      document.getElementById("employeeSection").classList.add("hidden");
+      document.getElementById(formId).classList.remove("hidden");
+      window.scrollTo({ top: document.getElementById(formId).offsetTop - 50, behavior: "smooth" });
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-blue-700 text-white py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">🏙️ Urban Deca Homes Ortigas</h1>
+    <p class="text-lg">Affordable. Accessible. Modern Living in the Heart of the City.</p>
+  </section>
+
+  <!-- Choice Buttons -->
+  <section class="max-w-3xl mx-auto py-12 text-center">
+    <h2 class="text-2xl font-bold mb-6">👇 Choose Who You Are</h2>
+    <div class="flex justify-center gap-6 flex-wrap">
+      <button onclick="showForm('buyerForm')" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">I’m a Buyer</button>
+      <button onclick="showForm('referralForm')" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700">I’m a Referral</button>
+      <button onclick="showForm('employeeSection')" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">I want to be an Employee</button>
+    </div>
+  </section>
+
+  <!-- Buyer Form -->
+  <section id="buyerForm" class="hidden max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-8 mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-blue-700">📅 Schedule a Site Visit</h2>
+    <form action="mailto:jesreal.lagrimas14@gmail.com" method="POST" enctype="text/plain" class="grid gap-6 text-left">
+      <div>
+        <label class="block mb-2 font-medium">Full Name:</label>
+        <input type="text" name="Full Name" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-blue-300">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Date & Time:</label>
+        <input type="datetime-local" name="Date and Time" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-blue-300">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Phone Number:</label>
+        <input type="tel" name="Phone Number" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-blue-300">
+      </div>
+      <div class="text-center space-y-4">
+        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">Submit Schedule</button>
+      </div>
+    </form>
+    <p class="mt-6 text-gray-700 text-center">
+      For more information, please visit: <br>
+      <a href="https://www.facebook.com/share/1CkGfJR3MW/" target="_blank" class="text-blue-600 font-semibold hover:underline">
+        Urban Deca Homes Ortigas on Facebook
+      </a>
+    </p>
+  </section>
+
+  <!-- Referral Form -->
+  <section id="referralForm" class="hidden max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-8 mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-green-700">🤝 Submit a Referral</h2>
+    <form action="mailto:jesreal.lagrimas14@gmail.com" method="POST" enctype="text/plain" class="grid gap-6 text-left">
+      <div>
+        <label class="block mb-2 font-medium">Your Name (Referrer):</label>
+        <input type="text" name="Referrer Name" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-green-300">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Full Name of Person You’re Referring:</label>
+        <input type="text" name="Referral Full Name" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-green-300">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Referral Phone Number:</label>
+        <input type="tel" name="Referral Phone Number" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring focus:ring-green-300">
+      </div>
+      <div class="text-center space-y-4">
+        <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700">Submit Referral</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Employee Section -->
+  <section id="employeeSection" class="hidden max-w-xl mx-auto bg-white shadow-lg rounded-2xl p-8 mb-12 text-center">
+    <h2 class="text-2xl font-bold mb-6 text-purple-700">👔 Join Our Team</h2>
+    <p class="text-gray-700 mb-6">
+      Be part of Urban Deca Homes Ortigas! <br>
+      Please send your resume directly to:  
+      <span class="font-semibold text-purple-600">jesreal.lagrimas14@gmail.com</span>
+    </p>
+    <a href="mailto:jesreal.lagrimas14@gmail.com" class="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700">
+      📧 Send Resume
+    </a>
+  </section>
+
+</body>
+</html>
